@@ -7,7 +7,10 @@ module.exports = {
     extend: {
       fontFamily: {
         grotesk: ['Space Grotesk', 'sans-serif'], 
-      
+        inter: ['Inter ', 'sans-serif'], 
+      },
+      animation: {
+        slowSpin: 'spin 10s linear infinite', 
       },
     },
   },

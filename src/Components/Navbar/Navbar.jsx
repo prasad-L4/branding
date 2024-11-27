@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { MdOutlineEmail } from 'react-icons/md';
 import { RiCloseFill, RiMenu5Fill } from 'react-icons/ri';
 
-const Header = () => {
+const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -51,7 +51,7 @@ const Header = () => {
         {/* Menu and Send Message Button */}
         <div className="flex justify-end gap-7 items-center">
           <div className="flex justify-end ml-auto lg:justify-center lg:items-center space-x-9 font-grotesk font-medium text-[18px] cursor-pointer lg:flex">
-            <ul className="flex justify-center items-center space-x-9 hidden lg:flex">
+            <ul className="flex justify-center items-center space-x-9  hidden lg:flex">
               <li>Home</li>
               <li>Agency</li>
               <li className="text-gray-400">Services</li>
@@ -82,12 +82,12 @@ const Header = () => {
       <div
         className="sidebar fixed top-0 right-0 w-[60%] h-full bg-black shadow-lg flex items-center transform translate-x-[100%] transition-transform duration-300 ease-in-out"
       >
-        <ul className="flex gap-4 font-grotesk  bg-black  text-white flex-col p-5 px-20 w-[100%] space-y-4">
+        <ul className="flex gap-4 font-grotesk  bg-black  text-white flex-col p-5 px-20 font-semibold w-[100%] space-y-4">
           <li className='bg-black' >Home</li>
           <hr className='w-full' />
-          <li className='bg-black'>Agency</li>
+          <li onClick={()=>setIsMenuOpen(false)} className='bg-black'>Agency</li>
           <hr />
-          <li className='bg-black'>Services</li>
+          <li className='bg-black text-gray-400'>Services</li>
           <hr />
           <li className='bg-black'>Portfolio</li>
           <hr />
@@ -98,4 +98,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default Navbar;

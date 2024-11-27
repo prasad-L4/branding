@@ -2,10 +2,9 @@ import React, { useEffect } from "react";
 import gsap from "gsap";
 import { BsCursorFill } from "react-icons/bs";
 import { useGSAP } from "@gsap/react";
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 const Services = () => {
-
-    gsap.registerPlugin(ScrollTrigger);
+  gsap.registerPlugin(ScrollTrigger);
   useEffect(() => {
     const rotatedTextElements = document.querySelectorAll(".rotated-text");
 
@@ -31,177 +30,171 @@ const Services = () => {
 
     return () => gsap.killTweensOf(rotatedTextElements);
   }, []);
-  useGSAP(()=>{
-    gsap.from('.header-title',{
-        y:50,
-        opacity:0,
-        delay:0.8,
-        duration:0.7
-    })
- 
-  
-      gsap.from('.solution-sec', {
-        x: -70, 
-        duration: 1,
-        delay:.5,
-        scrollTrigger: {
-          trigger: '.solution-sec', 
-          start: 'top 80%', 
-          end: 'bottom 40%', 
-          scrub: 2, 
-   
-        }
-      });
-      gsap.from('.branding',{
-        y: 70, 
-        opacity:0,
-        duration: .1,
-        delay:.5,
-        scrollTrigger: {
-          trigger: '.branding-sec', 
-          start: 'top 80%', 
-          end: 'bottom 40%', 
-          scrub: 2, 
-   
-        }
-      })
-      gsap.from('.branding1',{
-        y: 70, 
-        opacity:0,
-        duration: .1,
-        delay:.5,
-        scrollTrigger: {
-          trigger: '.branding-sec1', 
-          start: 'top 80%', 
-          end: 'bottom 40%', 
-          scrub: 2, 
-   
-        }
-      })
-      gsap.from('.branding-list',{
-      x:80,
-        opacity:0,
-        duration: 2,
-        delay:1.5,
-        scrollTrigger: {
-          trigger: '.branding-sec', 
-          start: 'top 80%', 
-          end: 'bottom 40%', 
-          scrub: 2, 
-        }
-      })
-      gsap.from('.branding-list1',{
-        x:80,
-          opacity:0,
-          duration: 2,
-          delay:1.5,
-          scrollTrigger: {
-            trigger: '.branding-sec1', 
-            start: 'top 80%', 
-            end: 'bottom 40%', 
-            scrub: 2, 
-          }
-        })
-      gsap.from('.img-card-1',{
-        y:50,
-        duration: 2,
+  useGSAP(() => {
+    gsap.from(".header-title", {
+      y: 50,
+      opacity: 0,
+      delay: 0.8,
+      duration: 0.7,
+    });
+    gsap.from(".solution-sec", {
+      x: -70,
+      duration: 1,
+      delay: 0.5,
+      scrollTrigger: {
+        trigger: ".solution-sec",
+        start: "top 80%",
+        end: "bottom 40%",
+        scrub: 2,
+      },
+    });
+    gsap.from(".branding", {
+      y: 30,
+      opacity: 0,
+      duration: 0.1,
+      delay: 0.5,
+      scrollTrigger: {
+        trigger: ".branding-sec",
+        start: "top 80%",
+        end: "bottom 40%",
+        scrub: 2,
+      },
+    });
+    gsap.from(".branding1", {
+      y: 70,
+      opacity: 0,
+      duration: 0.1,
+      delay: 0.5,
+      scrollTrigger: {
+        trigger: ".branding-sec1",
+        start: "top 80%",
+        end: "bottom 40%",
+        scrub: 2,
+      },
+    });
+    gsap.from(".branding-list", {
+      x: 80,
+      opacity: 0,
+      duration: 2,
+      delay: 1.5,
+      scrollTrigger: {
+        trigger: ".branding-sec",
+        start: "top 80%",
+        end: "bottom 40%",
+        scrub: 2,
+      },
+    });
+    gsap.from(".branding-list1", {
+      x: 80,
+      opacity: 0,
+      duration: 2,
+      delay: 1.5,
+      scrollTrigger: {
+        trigger: ".branding-sec1",
+        start: "top 80%",
+        end: "bottom 40%",
+        scrub: 2,
+      },
+    });
+    gsap.from(".img-card-1", {
+      y: 50,
+      duration: 2,
 
-        scrollTrigger: {
-          trigger: '.img-cards', 
-          start: 'top 80%', 
-          end: 'bottom 20%', 
-          scrub: 2, 
-        }
-      })
-      gsap.from('.img-card-2',{
-        y:-50,
-   
-        duration: 1,
-        delay:1.5,
-        scrollTrigger: {
-          trigger: '.img-cards', 
-          start: 'top 80%', 
-          end: 'bottom 20%', 
-          scrub: 2, 
-        }
-      })
-      gsap.from('.img-card-3',{
-        y:-50,
-   
-        duration: 1,
-        delay:1.5,
-        scrollTrigger: {
-          trigger: '.img-cards1', 
-          start: 'top 80%', 
-          end: 'bottom 20%', 
-          scrub: 2, 
-        }
-      })
-      gsap.from('.img-card-4',{
-        y:50,
-   
-        duration: 1,
-        delay:1.5,
-        scrollTrigger: {
-          trigger: '.img-cards1', 
-          start: 'top 80%', 
-          end: 'bottom 20%', 
-          scrub: 2, 
-        }
-      })
-      gsap.from('.img-card-5',{
-        y:50,
-   
-        duration: 1,
-        delay:1.5,
-        scrollTrigger: {
-          trigger: '.img-cards2', 
-          start: 'top 80%', 
-          end: 'bottom 20%', 
-          scrub: 2, 
-        }
-      })
-      gsap.from('.img-card-6',{
-        y:-50,
-   
-        duration: 1,
-        delay:1.5,
-        scrollTrigger: {
-          trigger: '.img-cards2', 
-          start: 'top 80%', 
-          end: 'bottom 20%', 
-          scrub: 2, 
-        }
-      })
-  })
+      scrollTrigger: {
+        trigger: ".img-cards",
+        start: "top 80%",
+        end: "bottom 20%",
+        scrub: 2,
+      },
+    });
+    gsap.from(".img-card-2", {
+      y: -50,
+
+      duration: 1,
+      delay: 1.5,
+      scrollTrigger: {
+        trigger: ".img-cards",
+        start: "top 80%",
+        end: "bottom 20%",
+        scrub: 2,
+      },
+    });
+    gsap.from(".img-card-3", {
+      y: -50,
+
+      duration: 1,
+      delay: 1.5,
+      scrollTrigger: {
+        trigger: ".img-cards1",
+        start: "top 80%",
+        end: "bottom 20%",
+        scrub: 2,
+      },
+    });
+    gsap.from(".img-card-4", {
+      y: 50,
+
+      duration: 1,
+      delay: 1.5,
+      scrollTrigger: {
+        trigger: ".img-cards1",
+        start: "top 80%",
+        end: "bottom 20%",
+        scrub: 2,
+      },
+    });
+    gsap.from(".img-card-5", {
+      y: 50,
+
+      duration: 1,
+      delay: 1.5,
+      scrollTrigger: {
+        trigger: ".img-cards2",
+        start: "top 80%",
+        end: "bottom 20%",
+        scrub: 2,
+      },
+    });
+    gsap.from(".img-card-6", {
+      
+      y: -50,
+      duration: 1,
+      delay: 1.5,
+      scrollTrigger: {
+        trigger: ".img-cards2",
+        start: "top 80%",
+        end: "bottom 20%",
+        scrub: 2,
+      },
+    });
+  });
 
   return (
     <>
       <main className="py-10">
-      <div className="lg:relative flex lg:flex-row justify-center items-center overflow-hidden  mt-[3.5rem]">
-  {/* Image Section */}
-  <div className="lg:relative flex flex-col-reverse lg:flex-row justify-between w-full  md:w-[80%] ml-0 lg:ml-[18.8rem]">
-
-    <div className="lg:absolute top-[30%] left-[-20%] flex items-center bg-transparent  text-left">
-      <h6 className="rotated-text transform rotate-[-90deg] w-[10rem]   lg:mr-[-2rem] text-[12px] text-center sm:text-[15px] font-medium text-black">
-        OUR SERVICES
-      </h6>
-      <hr className="w-[1px] bg-gray-300 h-[10rem] ml-[-2rem] mx-2" />
-      <h2 className="header-title font-grotesk font-semibold  sm:text-[45px] lg:text-[50px] leading-tight text-[30px] bg-transparent text-black">
-        We craft indelible <br /> digital experiences <br /> via the best services.
-      </h2>
-    </div>
-    <div className="banner-img flex justify-center w-full overflow-hidden">
-  <img
-    src="/Assets/banner.jpg"
-    alt="Banner"
-    className="h-auto md:h-[500px] lg:h-[550px] object-cover md:ml-[5rem] lg:ml-[10rem] w-0 animate-reveal-left-to-right"
-  />
-</div>
-
-  </div>
-</div>
-
+        <div className="lg:relative flex lg:flex-row justify-center items-center overflow-hidden  mt-[3.5rem]">
+          {/* Image banner Section */}
+          <div className="lg:relative flex flex-col-reverse lg:flex-row justify-between w-full  md:w-[80%] ml-0 lg:ml-[18.8rem]">
+            <div className="lg:absolute top-[30%] left-[-25%] flex items-center lg:gap-5 bg-transparent  text-left">
+              <h6 className="rotated-text transform rotate-[-90deg] w-[10rem]   lg:mr-[-2rem] text-[12px] text-center sm:text-[15px] font-medium text-black">
+                OUR SERVICES
+              </h6>
+              <hr className="w-[1px] bg-gray-300 h-[9rem] ml-[-1rem] mx-2" />
+              <h2 className="header-title font-grotesk font-semibold  sm:text-[45px] lg:text-[50px] leading-[3.3rem] text-[30px] bg-transparent text-black">
+                We craft indelible <br /> digital experiences <br /> via 
+                best services.
+              </h2>
+            </div>
+            <div className="banner-img flex justify-center w-full overflow-hidden">
+              <img
+                src="/Assets/banner.jpg"
+                alt="Banner"
+                className="h-auto md:h-[500px] lg:h-[550px] object-cover md:ml-[5rem] lg:ml-[10rem] w-0 animate-reveal-left-to-right"
+              />
+            </div>
+          </div>
+        </div>
+        {/* cards section */}
         <section className="w-[100%] md:mt-[3rem] overflow-hidden mt-[3rem] flex justify-center flex-col items-center">
           <div className="solution-sec w-[90%] flex lg:flex-row flex-col justify-center items-center overflow-hidden">
             <div className="solution w-[90%] lg:w-[900px]">
@@ -250,7 +243,7 @@ const Services = () => {
                 </p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-3 overflow-hidden">
                   <div className=" flex flex-col text-[16px] font-inter font-semibold text-gray-600">
-                    <h6  className="  flex gap-2 items-center">
+                    <h6 className="  flex gap-2 items-center">
                       <span className="text-[20px]">+</span>Brand strategy
                     </h6>
                     <h6 className="flex gap-2 items-center">
@@ -281,8 +274,7 @@ const Services = () => {
               </div>
             </div>
 
-       
-            <div className="img-cards overflow-hidden flex justify-center m-auto gap-6 md:flex-row flex-col sm:mt-[4rem] w-[90%] items-center">
+            <div className="img-cards overflow-hidden flex justify-center m-auto gap-14 sm:gap-6 md:flex-row flex-col sm:mt-[4rem] w-[90%] items-center">
               <div className="img-card-1 w-[100%] ">
                 <img src="/Assets/card-1.jpg" alt="Image 1" />
               </div>
@@ -341,7 +333,7 @@ const Services = () => {
               </div>
             </div>
 
-            <div className=" img-cards1 overflow-hidden flex justify-center m-auto gap-6 md:flex-row flex-col sm:mt-[4rem] w-[90%] items-center">
+            <div className=" img-cards1 overflow-hidden flex justify-center m-auto gap-14 sm:gap-6 md:flex-row flex-col sm:mt-[4rem] w-[90%] items-center">
               <div className="img-card-3 md:w-[50%] ">
                 <img src="/Assets/card-4.jpg" alt="Image 2" />
               </div>
@@ -400,9 +392,9 @@ const Services = () => {
               </div>
             </div>
 
-            <div className="img-cards2 overflow-hidden flex justify-center m-auto gap-6 md:flex-row flex-col sm:mt-[4rem] w-[90%] items-center">
+            <div className="img-cards2 overflow-hidden flex justify-center m-auto gap-14 sm:gap-6 md:flex-row flex-col sm:mt-[4rem] w-[90%] items-center">
               <div className="img-card-5 w-[100%]">
-                <img  src="/Assets/card-6.jpg" alt="Image 1" />
+                <img src="/Assets/card-6.jpg" alt="Image 1" />
               </div>
               <div className=" img-card-6  md:w-[50%]">
                 <img src="/Assets/card-7.jpg" alt="Image 2" />

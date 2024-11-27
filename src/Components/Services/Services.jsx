@@ -88,7 +88,7 @@ const Services = () => {
       x: 80,
       opacity: 0,
       duration: 2,
-      delay: .5,
+      delay: 1.5,
       scrollTrigger: {
         trigger: ".branding-sec",
         start: "top 80%",
@@ -100,7 +100,7 @@ const Services = () => {
       x: 80,
       opacity: 0,
       duration: 2,
-      delay: .5,
+      delay: 1.5,
       scrollTrigger: {
         trigger: ".branding-sec1",
         start: "top 80%",

@@ -72,11 +72,23 @@ const Services = () => {
         scrub: 2,
       },
     });
+    gsap.from(".branding2", {
+        y: 70,
+        opacity: 0,
+        duration: 0.1,
+        delay: 0.5,
+        scrollTrigger: {
+          trigger: ".branding-sec2",
+          start: "top 80%",
+          end: "bottom 40%",
+          scrub: 2,
+        },
+      });
     gsap.from(".branding-list", {
       x: 80,
       opacity: 0,
       duration: 2,
-      delay: 1.5,
+      delay: .5,
       scrollTrigger: {
         trigger: ".branding-sec",
         start: "top 80%",
@@ -88,7 +100,7 @@ const Services = () => {
       x: 80,
       opacity: 0,
       duration: 2,
-      delay: 1.5,
+      delay: .5,
       scrollTrigger: {
         trigger: ".branding-sec1",
         start: "top 80%",
@@ -96,6 +108,18 @@ const Services = () => {
         scrub: 2,
       },
     });
+    gsap.from(".branding-list2", {
+        x: 80,
+        opacity: 0,
+        duration: 2,
+        delay: .5,
+        scrollTrigger: {
+          trigger: ".branding-sec2",
+          start: "top 80%",
+          end: "bottom 40%",
+          scrub: 2,
+        },
+      });
     gsap.from(".img-card-1", {
       y: 50,
       duration: 2,
@@ -343,16 +367,16 @@ const Services = () => {
             </div>
           </div>
           <div className="grid w-[100%] sm:w-[90%] lg:w-[80%] gap-6 items-center sm:mt-[1rem] mx-auto">
-            <div className="grid lg:grid-cols-2 gap-6 items-center px-5 ">
+            <div className="branding-sec2 grid lg:grid-cols-2 gap-6 items-center px-5  overflow-hidden">
               <div className="flex flex-col sm:flex-row text-start md:items-center sm:gap-8">
-                <h1 className="text-[80px] sm:text-[130px] font-grotesk font-bold text-gray-300">
-                  02
+                <h1 className="branding1 text-[80px] sm:text-[130px] font-grotesk font-bold text-gray-300">
+                  03
                 </h1>
-                <h2 className="text-[30px] sm:text-[45px] text-start font-grotesk font-semibold">
-                  Website <br className="sm:block hidden" /> development
+                <h2 className=" branding2 text-[30px] sm:text-[45px] text-start font-grotesk font-semibold">
+                  eCommerce <br className="sm:block hidden" /> solutions
                 </h2>
               </div>
-              <div className="lg:pt-[6.5rem]">
+              <div className="branding-list2 lg:pt-[6.5rem]">
                 <p className="text-[16px] text-gray-500 font-inter">
                   We are excited for our work and how it positively impacts
                   clients. With over 12 years of experience, we have been
@@ -362,27 +386,27 @@ const Services = () => {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-3">
                   <div className="flex flex-col text-[16px] font-inter font-semibold text-gray-600">
                     <h6 className="flex gap-2 items-center">
-                      <span className="text-[20px]">+</span>API development
+                      <span className="text-[20px]">+</span>Shipping features
                     </h6>
                     <h6 className="flex gap-2 items-center">
                       <span className="text-[20px]">+</span>Cloud migration
                     </h6>
                     <h6 className="flex gap-2 items-center">
-                      <span className="text-[20px]">+</span>Research and testing
+                      <span className="text-[20px]">+</span>payment gateways
                     </h6>
                     <h6 className="flex gap-2 items-center">
-                      <span className="text-[20px]">+</span>JavaScript
+                      <span className="text-[20px]">+</span>Categorization
                     </h6>
                   </div>
                   <div className="flex flex-col text-[16px] font-inter font-semibold text-gray-600">
                     <h6 className="flex gap-2 items-center">
-                      <span className="text-[20px]">+</span>WordPress
+                      <span className="text-[20px]">+</span>CMS solutions
                     </h6>
                     <h6 className="flex gap-2 items-center">
-                      <span className="text-[20px]">+</span>Graphic design
+                      <span className="text-[20px]">+</span>eCommerce platform
                     </h6>
                     <h6 className="flex gap-2 items-center">
-                      <span className="text-[20px]">+</span>Custom website
+                      <span className="text-[20px]">+</span>App development
                     </h6>
                     <h6 className="flex gap-2 items-center">
                       <span className="text-[20px]">+</span>Flutter framework

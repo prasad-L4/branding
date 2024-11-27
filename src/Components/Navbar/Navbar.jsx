@@ -1,18 +1,44 @@
-import React from "react";
-import { useState } from 'react';
-import { MdOutlineEmail } from "react-icons/md";
-import { RiMenu5Fill } from "react-icons/ri";
-import { RiCloseFill } from "react-icons/ri";
-const Navbar = () => {
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
+import gsap from 'gsap';
+import React, { useState, useEffect } from 'react';
+import { MdOutlineEmail } from 'react-icons/md';
+import { RiCloseFill, RiMenu5Fill } from 'react-icons/ri';
 
-    const toggleMenu = () => {
-      setIsMenuOpen((prev) => !prev); // Toggle the menu state
-    };
+const Header = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen((prev) => !prev);
+
+    if (!isMenuOpen) {
+    
+      gsap.to('.main-nav', {
+        marginLeft: '-110%', 
+        duration: 0.5,
+        ease: 'power2.inOut',
+      });
+      gsap.to('.sidebar', {
+        x: 0, 
+        duration: 0.5,
+        ease: 'power2.inOut',
+      });
+    } else {
+   
+      gsap.to('.main-nav', {
+        marginLeft: '0px', 
+        duration: 0.5,
+        ease: 'power2.inOut',
+      });
+      gsap.to('.sidebar', {
+        x: '100%', 
+        duration: 0.5,
+        ease: 'power2.inOut',
+      });
+    }
+  };
+
   return (
-    <>
-   <header className="w-full h-[94px] bg-yellow-300 flex justify-center items-center">
-      <div className="flex w-[90%] justify-between items-center">
+    <header className="w-full fixed z-50 h-[94px]  flex justify-center items-center">
+      <div className="main-nav flex w-[90%] justify-between items-center">
         {/* Logo Section */}
         <div className="flex-shrink-0 justify-center items-center">
           <img
@@ -34,7 +60,6 @@ const Navbar = () => {
             </ul>
           </div>
 
-          {/* Send a Message Button */}
           <button className="flex lg:justify-center hidden sm:block lg:items-center gap-2 text-[13px] font-medium outline-none border relative group px-5 py-3 overflow-hidden cursor-pointer text-black ml-auto">
             <span className="btn__visible inline-flex items-center gap-1 w-full h-full transition-all duration-200 group-hover:translate-y-[-100%] group-hover:text-white">
               <MdOutlineEmail /> Send a message
@@ -47,33 +72,30 @@ const Navbar = () => {
           {/* Mobile Menu Icon */}
           <div className="lg:hidden text-[24px]">
             <button onClick={toggleMenu}>
-              {isMenuOpen ? (
-                <RiCloseFill /> // Show Close Icon when menu is open
-              ) : (
-                <RiMenu5Fill /> // Show Menu Icon when menu is closed
-              )}
+              {isMenuOpen ? <RiCloseFill /> : <RiMenu5Fill />}
             </button>
           </div>
         </div>
       </div>
 
-      {/* Mobile Menu Modal */}
+      {/* Sidebar */}
       <div
-        className={`fixed top-0 right-0 h-full w-[90%] bg-red-500 text-white transition-transform duration-500 ${isMenuOpen ? "transform translate-x-0" : "transform translate-x-full"}`}
-        style={{ transition: "transform 0.5s ease-in-out" }} // Smooth transition
+        className="sidebar fixed top-0 right-0 w-[60%] h-full bg-black shadow-lg flex items-center transform translate-x-[100%] transition-transform duration-300 ease-in-out"
       >
-        <ul className="flex flex-col items-center justify-center h-full space-y-6 font-medium">
-          <li>Home</li>
-          <li>Agency</li>
-          <li className="text-gray-400">Services</li>
-          <li>Portfolio</li>
-          <li>Contact</li>
+        <ul className="flex gap-4 font-grotesk  bg-black  text-white flex-col p-5 px-20 w-[100%] space-y-4">
+          <li className='bg-black' >Home</li>
+          <hr className='w-full' />
+          <li className='bg-black'>Agency</li>
+          <hr />
+          <li className='bg-black'>Services</li>
+          <hr />
+          <li className='bg-black'>Portfolio</li>
+          <hr />
+          <li className='bg-black'>Contact</li>
         </ul>
       </div>
     </header>
-
-    </>
   );
 };
 
-export default Navbar;
+export default Header;
